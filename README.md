@@ -2,15 +2,20 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![npm](https://img.shields.io/npm/v/@agent-friday/orchestration-framework.svg)](https://www.npmjs.com/package/@agent-friday/orchestration-framework)
 
-A trust-aware multi-agent orchestration framework extracted from [Agent Friday](https://github.com/FutureSpeakAI/nexus-os), an AGI desktop operating system. This framework provides four interlocking modules that enable recursive agent delegation with trust-tier inheritance, cross-tree awareness, capability-based routing with performance feedback, and self-healing anomaly detection -- all governed by cLaw safety constraints that guarantee interruptibility and prevent privilege escalation.
+A trust-aware multi-agent orchestration framework extracted from [Agent Friday](https://github.com/FutureSpeakAI/Agent-Friday), an AGI desktop operating system.
+
+## Why This Matters
+
+Most multi-agent frameworks treat all agents as equally trusted peers. In the real world, that's dangerous — an agent spawned from a public Discord message shouldn't have the same authority as one you launched yourself. This framework enforces **trust-tier degradation** as a first-class primitive: when an agent delegates to a child, the child's trust level can only stay the same or decrease, never escalate. This is inspired by the cLaw safety model (Agent Friday's equivalent of Asimov's Laws), which guarantees that no chain of delegation can ever produce an agent with more authority than its creator intended.
+
+The result is a system where you can safely let agents spawn sub-agents recursively — with configurable depth limits, sub-500ms emergency halt propagation across entire delegation trees, cross-tree awareness so agents know what siblings are doing, and self-healing performance monitoring that detects when an agent type is degrading and recommends corrections.
+
+If you're building anything where AI agents coordinate with each other — research pipelines, autonomous coding workflows, multi-step task decomposition — this gives you the safety and observability layer that's missing from most orchestration tools.
 
 ## Architecture
 
 The framework consists of four modules that form a complete orchestration stack:
-
-\
 
 - **Delegation Engine** -- Recursive parent-child agent trees with trust-tier degradation, configurable depth limits (default 3, max 5), BFS halt propagation with 500ms interruptibility guarantee, context summarization, and partial result collection from interrupted children.
 
@@ -23,7 +28,7 @@ The framework consists of four modules that form a complete orchestration stack:
 ## Installation
 
 ```bash
-npm install @agent-friday/orchestration-framework
+npm install github:FutureSpeakAI/agent-fridays-orchestration-framework
 ```
 
 ## Quick Start
@@ -139,7 +144,7 @@ Each module exports a class with full TypeScript types. Key methods:
 
 ## Origin
 
-Extracted from [Agent Friday](https://github.com/FutureSpeakAI/nexus-os) (Nexus OS), an AGI desktop operating system.
+Extracted from [Agent Friday](https://github.com/FutureSpeakAI/Agent-Friday) (Nexus OS), an AGI desktop operating system.
 
 ## License
 
