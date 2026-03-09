@@ -1,0 +1,40 @@
+{
+  "name": "@agent-friday/orchestration-framework",
+  "version": "1.0.0",
+  "description": "Trust-aware multi-agent orchestration with delegation trees, awareness mesh, capability routing, and self-healing performance monitoring",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "multi-agent",
+    "orchestration",
+    "delegation",
+    "trust-tier",
+    "ai-agents",
+    "awareness-mesh",
+    "capability-routing",
+    "self-healing"
+  ],
+  "author": "FutureSpeakAI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FutureSpeakAI/agent-fridays-orchestration-framework.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
