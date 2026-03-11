@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 
-A trust-aware multi-agent orchestration framework extracted from [Agent Friday](https://github.com/FutureSpeakAI/Agent-Friday), an AGI desktop operating system.
+A trust-aware multi-agent orchestration framework extracted from [Agent Friday](https://github.com/FutureSpeakAI/Agent-Friday), the world's most trustworthy AI assistant.
 
 ## Why This Matters
 
@@ -144,7 +144,7 @@ Each module exports a class with full TypeScript types. Key methods:
 
 ## Origin
 
-Extracted from [Agent Friday](https://github.com/FutureSpeakAI/Agent-Friday) (Nexus OS), an AGI desktop operating system.
+Extracted from [Agent Friday](https://github.com/FutureSpeakAI/Agent-Friday), the world's most trustworthy AI assistant.
 
 ## License
 
